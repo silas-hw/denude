@@ -1,0 +1,11 @@
+# Import cache
+.import/
+
+# Binaries
+bin/
+build/
+lib/
+
+builds/
+"/assets/flp files"
+"/assets/gimp files"

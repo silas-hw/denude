@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="Respawn_Location" type="Area2D"]
+position = Vector2( 353, 222 )
