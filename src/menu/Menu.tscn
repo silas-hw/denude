@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://src/menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/sound/dev_whitenoise1.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/images/menu_background.png" type="Texture" id=3]
 [ext_resource path="res://assets/sound/menu.wav" type="AudioStream" id=4]
