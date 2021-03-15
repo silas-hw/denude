@@ -4,12 +4,13 @@ var direction = null
 
 func _ready():
 	set_physics_process(false)
+	print(self.position)
 
 func _physics_process(delta):
 	direction = get_direction(direction)
 	_velocity = get_new_velocity(_velocity, direction, speed, delta)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
-
+	
 func get_direction(direction):
 	var out = direction
 	if direction == null:

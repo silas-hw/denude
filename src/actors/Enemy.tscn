@@ -40,7 +40,8 @@ autoplay = "idle"
 anims/idle = SubResource( 1 )
 
 [node name="death" type="Area2D" parent="."]
-collision_layer = 0
+input_pickable = false
+collision_layer = 2147483648
 collision_mask = 2147483649
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
@@ -53,8 +54,3 @@ position = Vector2( 0, 6 )
 shape = SubResource( 3 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( -1, 6 )
-scale = Vector2( 0.9, 1 )
-rect = Rect2( -40, -40, 80, 75 )
-process_parent = true
-physics_process_parent = true

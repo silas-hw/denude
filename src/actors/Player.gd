@@ -123,4 +123,5 @@ func _on_Area_WallDrag_body_exited(body):
 
 
 func _on_death_body_entered(body):
-	death()
+	if body.name != "Enemy":
+		death()
