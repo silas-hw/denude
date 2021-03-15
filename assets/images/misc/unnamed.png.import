@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pressspace_spritesheet.png-e6280eff3b96173faa813657685ea12f.stex"
+path="res://.import/unnamed.png-30b74c7285395618ca2c8f88cb79fbdf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Pressspace_spritesheet.png"
-dest_files=[ "res://.import/Pressspace_spritesheet.png-e6280eff3b96173faa813657685ea12f.stex" ]
+source_file="res://assets/images/misc/unnamed.png"
+dest_files=[ "res://.import/unnamed.png-30b74c7285395618ca2c8f88cb79fbdf.stex" ]
 
 [params]
 

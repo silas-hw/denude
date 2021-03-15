@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/unnamed (1).png-355100208d2e8f7acc51c58d5c53e708.stex"
+path="res://.import/person_hanging.png-51354d300b2d96f502c111e3be3bbd51.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/unnamed (1).png"
-dest_files=[ "res://.import/unnamed (1).png-355100208d2e8f7acc51c58d5c53e708.stex" ]
+source_file="res://assets/images/misc/person_hanging.png"
+dest_files=[ "res://.import/person_hanging.png-51354d300b2d96f502c111e3be3bbd51.stex" ]
 
 [params]
 

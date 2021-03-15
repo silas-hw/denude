@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/menu/Menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/sound/dev_whitenoise1.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets/images/menu_background.png" type="Texture" id=3]
-[ext_resource path="res://assets/sound/menu.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/images/menu_text.png" type="Texture" id=5]
-[ext_resource path="res://assets/images/Pressspace_spritesheet.png" type="Texture" id=6]
+[ext_resource path="res://assets/sound/sfx/dev_whitenoise1.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/images/misc/menu_background.png" type="Texture" id=3]
+[ext_resource path="res://assets/sound/music/menu.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/images/misc/menu_text.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/spritesheets/Pressspace_spritesheet.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 1.75

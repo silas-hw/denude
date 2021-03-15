@@ -2,25 +2,25 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/unnamed.png-cb92ff664fc046b53ff76847d36e7401.stex"
+path="res://.import/Death.png-7cd6add0a06f67b530b9268f64b97df2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/unnamed.png"
-dest_files=[ "res://.import/unnamed.png-cb92ff664fc046b53ff76847d36e7401.stex" ]
+source_file="res://assets/images/spritesheets/Death.png"
+dest_files=[ "res://.import/Death.png-7cd6add0a06f67b530b9268f64b97df2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

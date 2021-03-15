@@ -1,8 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/levels/objects/World_Shadow/World_Shadow.gd" type="Script" id=1]
-[ext_resource path="res://assets/sound/dev_whitenoise1.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets/sound/dev_snap1.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/sound/sfx/dev_whitenoise1.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sound/sfx/dev_snap1.wav" type="AudioStream" id=4]
+
+
 
 
 

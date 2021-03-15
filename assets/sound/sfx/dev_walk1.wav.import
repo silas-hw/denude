@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/dev_walk1.wav-56b6721c51320bfaedb0d9ffaed6f9dc.sample"
+path="res://.import/dev_walk1.wav-fdc964b048f5edd2c1de5bc81ee18ac1.sample"
 
 [deps]
 
-source_file="res://assets/sound/dev_walk1.wav"
-dest_files=[ "res://.import/dev_walk1.wav-56b6721c51320bfaedb0d9ffaed6f9dc.sample" ]
+source_file="res://assets/sound/sfx/dev_walk1.wav"
+dest_files=[ "res://.import/dev_walk1.wav-fdc964b048f5edd2c1de5bc81ee18ac1.sample" ]
 
 [params]
 

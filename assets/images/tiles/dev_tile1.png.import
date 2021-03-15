@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemy_Collision_tile.png-e58b826b489755a4edf94f61555dcc2d.stex"
+path="res://.import/dev_tile1.png-c9694032f42f874f4c9e21074c2c803b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Enemy_Collision_tile.png"
-dest_files=[ "res://.import/Enemy_Collision_tile.png-e58b826b489755a4edf94f61555dcc2d.stex" ]
+source_file="res://assets/images/tiles/dev_tile1.png"
+dest_files=[ "res://.import/dev_tile1.png-c9694032f42f874f4c9e21074c2c803b.stex" ]
 
 [params]
 

@@ -1,9 +1,12 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/images/Player_spritesheet_dev1.png" type="Texture" id=2]
-[ext_resource path="res://assets/sound/dev_walk1.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/images/Death.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/spritesheets/Player_spritesheet_dev1.png" type="Texture" id=2]
+[ext_resource path="res://assets/sound/sfx/dev_walk1.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/images/spritesheets/Death.png" type="Texture" id=4]
+
+
+
 
 
 

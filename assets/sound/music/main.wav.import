@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/dev_snap1.wav-aed0ef5068bc1d713c23ef17041a5098.sample"
+path="res://.import/main.wav-281bd5932a100548f0979d0a3d9d3071.sample"
 
 [deps]
 
-source_file="res://assets/sound/dev_snap1.wav"
-dest_files=[ "res://.import/dev_snap1.wav-aed0ef5068bc1d713c23ef17041a5098.sample" ]
+source_file="res://assets/sound/music/main.wav"
+dest_files=[ "res://.import/main.wav-281bd5932a100548f0979d0a3d9d3071.sample" ]
 
 [params]
 
