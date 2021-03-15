@@ -3,8 +3,6 @@
 [ext_resource path="res://src/actors/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/spritesheets/Enemy_spritesheet_dev1.png" type="Texture" id=2]
 
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "idle"
 loop = true
@@ -22,21 +20,20 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 27, 29 )
+extents = Vector2( 26, 30 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 21, 27 )
 
 [node name="Enemy" type="KinematicBody2D"]
 collision_layer = 2
-collision_mask = 2147483912
+collision_mask = 2147483928
 script = ExtResource( 1 )
 speed = Vector2( 220, 1000 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 hframes = 10
-frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"
@@ -54,3 +51,10 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 6 )
 shape = SubResource( 3 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -1, 6 )
+scale = Vector2( 0.9, 1 )
+rect = Rect2( -40, -40, 80, 75 )
+process_parent = true
+physics_process_parent = true

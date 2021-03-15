@@ -2,6 +2,9 @@ extends Actor
 
 var direction = null
 
+func _ready():
+	set_physics_process(false)
+
 func _physics_process(delta):
 	direction = get_direction(direction)
 	_velocity = get_new_velocity(_velocity, direction, speed, delta)
