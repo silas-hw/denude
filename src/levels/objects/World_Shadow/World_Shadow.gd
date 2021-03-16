@@ -25,13 +25,14 @@ func toggle_tiles_collision():
 			tile_set.modulate = Color(0.26, 0.26, 0.26, 1)
 			tile_set.state = true
 		else:
+			
+			if player_in_tile:
+				Player.death()
+				
 			tile_set.set_collision_layer(0)
 		
 			tile_set.modulate = Color(1, 1, 1, 0.4)
 			tile_set.state = false
-			
-			if player_in_tile:
-				Player.respawn()
 			
 func _on_Cooldown_timeout():
 	can_player_toggle = true

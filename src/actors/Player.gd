@@ -14,6 +14,7 @@ onready var Respawn_Location = get_parent().get_node("Respawn_Location")
 var is_walldrag = false
 var can_walldrag = false
 var can_move = true
+var is_jump_interrupted
 
 func _physics_process(delta):
 	if check_collision_with_hazard():
@@ -27,7 +28,6 @@ func _physics_process(delta):
 		Kayote_Timer.start()
 			
 	var direction = get_direction()
-	var is_jump_interrupted = Input.is_action_just_released("move_jump")
 	_velocity = get_new_velocity(_velocity, speed, direction, is_jump_interrupted, delta)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 	Animation_Player.play(get_animation(direction, _velocity, is_jump_interrupted))
@@ -53,6 +53,8 @@ func get_direction():
 		
 	if Input.is_action_just_pressed("move_jump"):
 		Jump_Timer.start()
+		
+	is_jump_interrupted = Input.is_action_just_released("move_jump")
 		
 	if Kayote_Timer.time_left > 0 and Jump_Timer.time_left > 0:
 		direction.y = -1
@@ -123,5 +125,5 @@ func _on_Area_WallDrag_body_exited(body):
 
 
 func _on_death_body_entered(body):
-	if body.name != "Enemy":
+	if body.name == "Player":
 		death()
