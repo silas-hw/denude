@@ -342,7 +342,7 @@ tile_data = PoolIntArray( 4653350, 0, 0, 4718832, 0, 0, 4718886, 0, 0, 4784368, 
 position = Vector2( 8718, 2360 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 7927, 2239 )
+position = Vector2( 912, 1465 )
 walljump_velocity = Vector2( 800, -1000 )
 
 [node name="Area_WallDrag" parent="." instance=ExtResource( 4 )]
