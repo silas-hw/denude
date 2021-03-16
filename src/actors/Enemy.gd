@@ -4,7 +4,6 @@ var direction = null
 
 func _ready():
 	set_physics_process(false)
-	print(self.position)
 
 func _physics_process(delta):
 	direction = get_direction(direction)
@@ -16,6 +15,7 @@ func get_direction(direction):
 	if direction == null:
 		out = Vector2(-1, 0)
 	elif is_on_wall():
+		
 		out.x = -direction.x
 		
 	return out
