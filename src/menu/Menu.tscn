@@ -7,6 +7,23 @@
 [ext_resource path="res://assets/images/misc/menu_text.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/spritesheets/Pressspace_spritesheet.png" type="Texture" id=6]
 
+[sub_resource type="Animation" id=3]
+resource_name = "text"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
 [sub_resource type="Animation" id=1]
 length = 1.75
 tracks/0/type = "value"
@@ -56,10 +73,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1.7 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1.7, 1.701, 1.702 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -80.0, 0.0 ]
+"values": [ -80.0, 0.0, -23.5294, -80.0 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -76,23 +93,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 0.129408, 1, 0.277392 ),
 "update": 0,
 "values": [ Vector2( 619, 560 ), Vector2( 619, 515 ), Vector2( 619, 515 ), Vector2( 619, 560 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "text"
-length = 0.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4 ]
 }
 
 [node name="Menu" type="Node2D"]
@@ -121,6 +121,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 6 )
+hframes = 5
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+autoplay = "text"
+anims/text = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/start = SubResource( 1 )
+anims/text_float = SubResource( 2 )
+
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1920.0
 margin_bottom = 1080.0
@@ -128,10 +142,6 @@ color = Color( 1, 1, 1, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/start = SubResource( 1 )
-anims/text_float = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
@@ -143,12 +153,3 @@ stream = ExtResource( 4 )
 volume_db = -12.15
 autoplay = true
 bus = "music"
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 960, 540 )
-texture = ExtResource( 6 )
-hframes = 5
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
-autoplay = "text"
-anims/text = SubResource( 3 )
