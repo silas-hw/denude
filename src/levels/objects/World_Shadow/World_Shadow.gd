@@ -8,13 +8,12 @@ onready var Player = get_parent().get_node("Player")
 onready var TileSets = [$World_Shadow1, $World_Shadow2]
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("key_e") and can_player_toggle:
+	if Input.is_action_just_pressed("key_e") and can_player_toggle and Player.can_move:
+		can_player_toggle = false
 		toggle_tiles_collision()
 		$sound_snap.play()
 			
 		Animation_Player.play("World_Shadow_Cooldown")
-			
-		can_player_toggle = false
 			
 func toggle_tiles_collision():
 	var state
