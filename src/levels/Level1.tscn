@@ -419,7 +419,7 @@ tile_data = PoolIntArray( 4653350, 0, 0, 4718832, 0, 0, 4718886, 0, 0, 4784368, 
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Steve" parent="Enemies" instance=ExtResource( 16 )]
 position = Vector2( 8718, 2360 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
@@ -540,7 +540,6 @@ pause_mode = 2
 script = ExtResource( 19 )
 [connection signal="body_entered" from="World_Shadow/Player_Detection" to="World_Shadow" method="_on_Player_Detection_body_entered"]
 [connection signal="body_exited" from="World_Shadow/Player_Detection" to="World_Shadow" method="_on_Player_Detection_body_exited"]
-[connection signal="body_entered" from="Enemies/Enemy/death" to="Player" method="_on_death_body_entered"]
 [connection signal="body_entered" from="Area_WallDrag" to="Player" method="_on_Area_WallDrag_body_entered"]
 [connection signal="body_exited" from="Area_WallDrag" to="Player" method="_on_Area_WallDrag_body_exited"]
 [connection signal="viewport_entered" from="Label/VisibilityNotifier2D" to="Label" method="_on_VisibilityNotifier2D_viewport_entered"]
@@ -550,5 +549,3 @@ script = ExtResource( 19 )
 [connection signal="body_entered" from="Checkpoints/Checkpoint_1" to="." method="_on_Checkpoint_1_body_entered"]
 
 [editable path="World_Shadow"]
-
-[editable path="Enemies/Enemy"]
