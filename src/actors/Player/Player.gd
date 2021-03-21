@@ -13,16 +13,12 @@ onready var Respawn_Location = get_parent().get_node("Respawn_Location")
 
 var is_walldrag = false
 var can_walldrag = false
-var can_move = true
+export var can_move = true
 var is_jump_interrupted
 
 func _physics_process(delta):
 	if check_collision_with_hazard():
-		can_move = false
 		death()
-	
-	if !check_collision_with_hazard():
-		can_move = true
 		
 	if is_on_floor():
 		Kayote_Timer.start()
@@ -114,8 +110,6 @@ func respawn():
 	self.position = Respawn_Location.position
 	Player_Camera.reset_smoothing()
 	Player_Camera.set_enable_follow_smoothing(true)
-	
-	
 	
 func _on_Area_WallDrag_body_entered(body):
 	can_walldrag = true
