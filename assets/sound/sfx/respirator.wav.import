@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/respirator.wav-360cb6b8cfdfddc056a5d9d7684fa921.sample"
+
+[deps]
+
+source_file="res://assets/sound/sfx/respirator.wav"
+dest_files=[ "res://.import/respirator.wav-360cb6b8cfdfddc056a5d9d7684fa921.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
