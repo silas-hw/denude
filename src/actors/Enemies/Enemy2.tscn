@@ -12,7 +12,7 @@ extents = Vector2( 48, 48 )
 collision_layer = 2147483650
 collision_mask = 2147483912
 script = ExtResource( 1 )
-speed = Vector2( 300, 300 )
+speed = Vector2( 300, 650 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -48.0
@@ -28,6 +28,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="IdleTimer" type="Timer" parent="."]
+wait_time = 0.6
 one_shot = true
 
 [node name="death" type="Area2D" parent="."]
