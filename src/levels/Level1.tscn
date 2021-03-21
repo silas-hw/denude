@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://assets/images/tiles/dev_tile1.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player/Player.tscn" type="PackedScene" id=2]
@@ -35,6 +35,7 @@
 [ext_resource path="res://assets/images/tiles/dev_tile13.png" type="Texture" id=33]
 [ext_resource path="res://assets/images/tiles/dev_tile14.png" type="Texture" id=34]
 [ext_resource path="res://assets/images/tiles/dev_tile11.png" type="Texture" id=35]
+[ext_resource path="res://src/actors/Enemies/Enemy2.tscn" type="PackedScene" id=36]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -530,6 +531,9 @@ extents = Vector2( 122, 303 )
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 6 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="Background" parent="." instance=ExtResource( 5 )]
 
@@ -610,12 +614,16 @@ cell_size = Vector2( 32, 32 )
 collision_layer = 256
 collision_mask = 2
 format = 1
-tile_data = PoolIntArray( 4653350, 0, 0, 4718832, 0, 0, 4718886, 0, 0, 4784368, 0, 0, 4784422, 0, 0, 4849904, 0, 0, 4849958, 0, 0 )
+tile_data = PoolIntArray( 2424860, 0, 0, 2424864, 0, 0, 2424865, 0, 0, 2490396, 0, 0, 2490400, 0, 0, 2490401, 0, 0, 2555932, 0, 0, 2555936, 0, 0, 2555937, 0, 0, 2621468, 0, 0, 2621472, 0, 0, 2621473, 0, 0, 2687004, 0, 0, 2687008, 0, 0, 2687009, 0, 0, 2752540, 0, 0, 2752544, 0, 0, 2752545, 0, 0, 2818076, 0, 0, 2818080, 0, 0, 2818081, 0, 0, 2883612, 0, 0, 2883616, 0, 0, 2883617, 0, 0, 2949148, 0, 0, 2949152, 0, 0, 2949153, 0, 0, 3014684, 0, 0, 3014688, 0, 0, 3014689, 0, 0, 3080220, 0, 0, 3080224, 0, 0, 3080225, 0, 0, 3145756, 0, 0, 3145760, 0, 0, 3145761, 0, 0, 4653350, 0, 0, 4718832, 0, 0, 4718886, 0, 0, 4784368, 0, 0, 4784422, 0, 0, 4849904, 0, 0, 4849958, 0, 0 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Steve" parent="Enemies" instance=ExtResource( 16 )]
 position = Vector2( 8718, 2360 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 36 )]
+position = Vector2( 976, 1500 )
+collision_mask = 264
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 601, 1465 )
@@ -736,6 +744,7 @@ script = ExtResource( 19 )
 [connection signal="body_entered" from="World_Shadow/Player_Detection" to="World_Shadow" method="_on_Player_Detection_body_entered"]
 [connection signal="body_exited" from="World_Shadow/Player_Detection" to="World_Shadow" method="_on_Player_Detection_body_exited"]
 [connection signal="body_entered" from="Enemies/Steve/death" to="Player" method="_on_death_body_entered"]
+[connection signal="body_entered" from="Enemies/Enemy2/death" to="Player" method="_on_death_body_entered"]
 [connection signal="body_entered" from="Area_WallDrag" to="Player" method="_on_Area_WallDrag_body_entered"]
 [connection signal="body_exited" from="Area_WallDrag" to="Player" method="_on_Area_WallDrag_body_exited"]
 [connection signal="viewport_entered" from="Label/VisibilityNotifier2D" to="Label" method="_on_VisibilityNotifier2D_viewport_entered"]
@@ -747,3 +756,5 @@ script = ExtResource( 19 )
 [editable path="World_Shadow"]
 
 [editable path="Enemies/Steve"]
+
+[editable path="Enemies/Enemy2"]
