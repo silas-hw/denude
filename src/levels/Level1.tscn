@@ -681,7 +681,7 @@ margin_right = 3725.0
 margin_bottom = 1266.0
 custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color = Color( 0.223529, 0.219608, 0.219608, 1 )
-text = "Press E to toggle \"Shadow Objects\""
+text = "Press W to toggle \"Shadow Objects\""
 script = ExtResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
