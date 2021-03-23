@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/sound/sfx/dev_whitenoise1.wav" type="AudioStream" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/sound/music/menu.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/images/misc/menu_text.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/spritesheets/Pressspace_spritesheet.png" type="Texture" id=6]
+[ext_resource path="res://assets/sound/voices/voice1.wav" type="AudioStream" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "text"
@@ -25,7 +26,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-length = 1.75
+length = 5.0
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
@@ -45,7 +47,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.7 ),
+"times": PoolRealArray( 4.86 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -73,10 +75,48 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1.7, 1.701, 1.702 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.7, 1.701, 1.702, 1.71 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -80.0, 0.0, -23.5294, -80.0 ]
+"values": [ -80.0, 0.0, -23.5294, -80.0, -80.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ColorRect2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "audio"
+tracks/5/path = NodePath("AudioStreamPlayer2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 7 )
+} ],
+"times": PoolRealArray( 1.57 )
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("MenuMusic:volume_db")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.67, 1.71 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -12.15, -12.15, -80.0 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -143,6 +183,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 volume_db = -80.0
@@ -153,3 +202,7 @@ stream = ExtResource( 4 )
 volume_db = -12.15
 autoplay = true
 bus = "music"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -10.978
