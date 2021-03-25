@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/sound/sfx/dev_whitenoise1.wav" type="AudioStream" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/images/misc/menu_text.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/spritesheets/Pressspace_spritesheet.png" type="Texture" id=6]
 [ext_resource path="res://assets/sound/voices/voice1.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/sound/sfx/lightswitch1.wav" type="AudioStream" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "text"
@@ -26,7 +27,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-length = 5.0
+length = 6.0
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -47,7 +48,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 4.86 ),
+"times": PoolRealArray( 6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -118,6 +119,20 @@ tracks/6/keys = {
 "update": 0,
 "values": [ -12.15, -12.15, -80.0 ]
 }
+tracks/7/type = "audio"
+tracks/7/path = NodePath("lightswitch1")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 8 )
+} ],
+"times": PoolRealArray( 4.8 )
+}
 
 [sub_resource type="Animation" id=3]
 length = 3.0
@@ -165,7 +180,6 @@ __meta__ = {
 position = Vector2( 960, 540 )
 texture = ExtResource( 6 )
 hframes = 5
-frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 autoplay = "text"
@@ -206,3 +220,7 @@ bus = "music"
 [node name="voiceline1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = -10.978
+
+[node name="lightswitch1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -2.994
