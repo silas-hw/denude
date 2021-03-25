@@ -675,7 +675,7 @@ position = Vector2( 8, -136 )
 shape = SubResource( 31 )
 
 [node name="Respawn_Location" parent="." instance=ExtResource( 8 )]
-position = Vector2( 763, 1465 )
+position = Vector2( 767, 1465 )
 collision_layer = 2147483648
 collision_mask = 0
 
