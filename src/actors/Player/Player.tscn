@@ -288,7 +288,7 @@ anims/Walldrag_r = SubResource( 9 )
 
 [node name="walk" type="AudioStreamPlayer" parent="sounds"]
 stream = ExtResource( 3 )
-volume_db = -19.434
+volume_db = -7.434
 bus = "sfx"
 
 [node name="KayoteTimer" type="Timer" parent="."]

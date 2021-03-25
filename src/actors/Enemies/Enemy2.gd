@@ -5,9 +5,6 @@ onready var snap = Vector2(position.x, 0)
 
 var direction = 1
 
-func _process(delta):
-	print(IdleTimer.time_left)
-
 func _physics_process(delta):
 	if !is_on_ceiling() and !is_on_floor():
 		IdleTimer.start()

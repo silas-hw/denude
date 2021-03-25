@@ -8,8 +8,9 @@ onready var Player = get_parent().get_node("Player")
 onready var TileSets = [$World_Shadow1, $World_Shadow2]
 
 func _process(delta):
-	if Player.can_move == false:
-		can_player_toggle = false
+	pass
+	#if Player.can_move == false:
+	#	can_player_toggle = false
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("key_w") and can_player_toggle and Player.can_move:

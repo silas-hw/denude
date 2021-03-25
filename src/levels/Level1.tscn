@@ -735,7 +735,7 @@ anims/default = SubResource( 32 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-volume_db = -30.131
+volume_db = -16.131
 autoplay = true
 bus = "music"
 
@@ -828,7 +828,7 @@ script = ExtResource( 19 )
 [connection signal="viewport_exited" from="Label2/VisibilityNotifier2D" to="Label2" method="_on_VisibilityNotifier2D_viewport_exited"]
 [connection signal="viewport_entered" from="BackgroundAssets/Ivdrip/VisibilityNotifier2D" to="BackgroundAssets/Ivdrip" method="_on_VisibilityNotifier2D_viewport_entered"]
 [connection signal="body_entered" from="Checkpoints/Checkpoint_1" to="." method="_on_Checkpoint_1_body_entered"]
-[connection signal="body_entered" from="Checkpoints/Checkpoint_2" to="Player" method="_on_Checkpoint_2_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Checkpoint_2" to="." method="_on_Checkpoint_2_body_entered"]
 
 [editable path="World_Shadow"]
 
